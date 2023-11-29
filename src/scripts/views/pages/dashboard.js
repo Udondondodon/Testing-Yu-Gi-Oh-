@@ -3,7 +3,7 @@ const Dashboard = {
   async render() {
     return `
         <h2>Selamat datang di Website Gacha</h2>
-        <div class="restaurant-list" id="restaurant-list"></div>
+        <div class="card-list" id="card-list"></div>
         <a href="/#/gacha"><button>Gacha</button></a>
     `;
   },

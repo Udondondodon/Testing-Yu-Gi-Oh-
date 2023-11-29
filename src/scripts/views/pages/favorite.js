@@ -1,11 +1,11 @@
-import FavoriteRestaurantIdb from '../../data/favorite-restaurant';
-import { createRestaurantList } from '../templates/template-creator';
+import CardIDB from '../../data/card-database';
+import { createCardList } from '../templates/template-creator';
 
 const Favorite = {
   async render() {
     return `
         <h2>Ini adalah kartu yang berada pada decklist anda</h2>
-        <div class="restaurant-list" id="restaurant-list"></div>
+        <div class="card-list" id="card-list"></div>
     `;
   },
 
@@ -14,10 +14,10 @@ const Favorite = {
       alert(message);
     };
     try {
-      const restaurants = await FavoriteRestaurantIdb.getAllDecks();
-      const restaurantContainer = document.querySelector('#restaurant-list');
-      restaurants.forEach((restaurant) => {
-        restaurantContainer.innerHTML += createRestaurantList(restaurant);
+      const cards = await CardIDB.getAllDecks();
+      const cardContainer = document.querySelector('#card-list');
+      cards.forEach((card) => {
+        cardContainer.innerHTML += createCardList(card);
       });
     } catch (error) {
       showResponseMessage(error);

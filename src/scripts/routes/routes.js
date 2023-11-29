@@ -1,14 +1,14 @@
-import RestaurantList from '../views/pages/restaurant-list';
-import RestaurantDetail from '../views/pages/restaurant-detail';
+import Gacha from '../views/pages/gacha';
+import Detail from '../views/pages/card-detail';
 import Favorite from '../views/pages/favorite';
 import Dashboard from '../views/pages/dashboard';
 import Inventory from '../views/pages/inventory';
 
 const routes = {
   '/': Dashboard,
-  '/gacha': RestaurantList,
+  '/gacha': Gacha,
   '/inventory': Inventory,
-  '/detail/:id': RestaurantDetail,
+  '/detail/:id': Detail,
   '/favorite': Favorite,
 };
 

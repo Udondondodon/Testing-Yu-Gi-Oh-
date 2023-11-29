@@ -1,5 +1,3 @@
-/* eslint-disable no-prototype-builtins */
-/* eslint-disable consistent-return */
 import { openDB } from 'idb';
 import CONFIG from '../global/config';
 
@@ -14,7 +12,7 @@ const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
   },
 });
 
-const FavoriteRestaurantIdb = {
+const CardIDB = {
   async getCard(id) {
     if (!id) {
       return;
@@ -53,4 +51,4 @@ const FavoriteRestaurantIdb = {
   },
 };
 
-export default FavoriteRestaurantIdb;
+export default CardIDB;

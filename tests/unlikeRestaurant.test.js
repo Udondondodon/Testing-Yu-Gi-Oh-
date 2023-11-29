@@ -1,4 +1,4 @@
-import FavoriteRestaurantIdb from '../src/scripts/data/favorite-restaurant';
+import FavoriteRestaurantIdb from '../src/scripts/data/card-database';
 import * as TestFactories from './helpers/testFactories';
 
 global.structuredClone = (val) => JSON.parse(JSON.stringify(val));

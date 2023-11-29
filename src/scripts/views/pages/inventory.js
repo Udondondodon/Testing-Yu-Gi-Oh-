@@ -1,11 +1,11 @@
-import FavoriteRestaurantIdb from '../../data/favorite-restaurant';
-import { createRestaurantList } from '../templates/template-creator';
+import CardIDB from '../../data/card-database';
+import { createCardList } from '../templates/template-creator';
 
 const Inventory = {
   async render() {
     return `
-        <h2>Ini adalah list kartu anda</h2>
-        <div class="restaurant-list" id="restaurant-list"></div>
+        <h2>Ini adalah list kartu yang anda miliki</h2>
+        <div class="card-list" id="card-list"></div>
     `;
   },
 
@@ -14,10 +14,10 @@ const Inventory = {
       alert(message);
     };
     try {
-      const restaurants = await FavoriteRestaurantIdb.getAllCards();
-      const restaurantContainer = document.querySelector('#restaurant-list');
-      restaurants.forEach((cards) => {
-        restaurantContainer.innerHTML += createRestaurantList(cards);
+      const cards = await CardIDB.getAllCards();
+      const cardContainer = document.querySelector('#card-list');
+      cards.forEach((card) => {
+        cardContainer.innerHTML += createCardList(card);
       });
     } catch (error) {
       showResponseMessage(error);
