@@ -1,11 +1,11 @@
 import LikeButtonInitiator from '../../src/scripts/utils/like-button-initiator';
 
-const createLikeButtonInitiatorWithRestaurant = async (restaurant) => {
+const createLikeButtonInitiatorWithCard = async (card) => {
   await LikeButtonInitiator.init({
     likeButtonContainer: document.querySelector('#likeButtonContainer'),
-    restaurant,
+    card,
   });
 };
 
 // eslint-disable-next-line import/prefer-default-export
-export { createLikeButtonInitiatorWithRestaurant };
+export { createLikeButtonInitiatorWithCard };
