@@ -1,0 +1,291 @@
+$main-color : #001427;
+$base-color : #005bb1;
+$text-color :  white;
+$background-color : #001b35;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  background-color: $background-color;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: $main-color;
+  color: $text-color;
+  padding: 2px;
+  z-index: 100;
+}
+ 
+.skip-link:focus {
+   top: 0;
+}
+h2 {
+  color: $text-color;
+}
+header {
+  display: flex;
+  align-items: center;
+  padding-inline: 1rem;
+  background-color: $main-color;
+  color: $text-color;
+  justify-content: space-between;
+
+  h1 {
+    user-select: none;
+  }
+
+  #menu:hover {
+    color: $base-color;
+  }
+}
+
+.nav-dekstop {
+  background-color: $main-color;
+  ul {
+    display: flex;
+    text-transform: uppercase;
+  }
+
+  a {
+    text-decoration: none;
+    color: $text-color;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 12px 10px;
+  }
+
+  a:hover {
+    color: $base-color;
+  }
+}
+
+#menu {
+  font-size: 44px;
+  padding: 0 10px;
+  cursor: pointer;
+  color: $text-color;
+  background-color: $main-color;
+  border: 0;
+}
+
+picture {
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-inline: 1.5rem;
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+.container-list {
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 1rem;
+
+  img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: $main-color;
+  }
+
+  h3 {
+    color: $main-color;
+  }
+}
+
+.container-list:hover {
+  transition: all 0.2s ease-in;
+  background-color: $main-color;
+  a {
+    color: $text-color;
+  }
+
+  h3 {
+    color: $text-color;
+  }
+}
+
+.container-detail {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  img {
+    width: 60%;
+  }
+}
+
+.body {
+  margin-bottom: 20px;
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  #address {
+    text-align: center;
+  }
+}
+
+.menu {
+  margin-bottom: 20px;
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  h4 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 20px;
+
+    li {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    border: solid $base-color;
+    text-align: center;
+    color: white;
+    background-color: $main-color;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    }
+  }
+
+  #review {
+    p {
+      font-size: 1rem;
+      text-align: left;
+      margin: 0.3rem;
+    }
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.4rem;
+  label {
+    font-size: 1rem;
+  }
+  input {
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  textarea {
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  button {
+    border: $base-color;
+    background-color: $main-color;
+    color: $text-color;
+    border-radius: 0.2rem;
+    font-weight: 700;
+  }
+  button:hover {
+    background-color: $text-color;
+    color: $main-color;
+    cursor: pointer;
+  }
+}
+
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $main-color;
+
+  position: fixed;
+  bottom: 65px;
+  right: 30px;
+  border-radius: 50%;
+  border: 0;
+
+  font-size: 18px;
+  color: $text-color;
+  cursor: pointer;
+}
+
+footer {
+  background-color: $main-color;
+  padding: 2px;
+  padding-inline: 10px;
+  width: 100%;
+  bottom: 0px;
+  
+  p {
+    color: $text-color;
+  }
+}
+
+#loading-screen {
+  display: flex;
+  justify-content: center;
+}
+
+.loader {
+  border: 16px solid $text-color;
+  border-top: 16px solid $main-color;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
