@@ -7,5 +7,10 @@ const createLikeButtonInitiatorWithCard = async (card) => {
   });
 };
 
-// eslint-disable-next-line import/prefer-default-export
-export { createLikeButtonInitiatorWithCard };
+const createGachaButtonInitiatorWithCard = async () => {
+  await LikeButtonInitiator.init({
+    likeButtonContainer: document.querySelector('#gachaButton'),
+  });
+};
+
+export { createLikeButtonInitiatorWithCard, createGachaButtonInitiatorWithCard };

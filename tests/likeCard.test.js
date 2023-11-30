@@ -44,7 +44,7 @@ describe('Liking a card', () => {
     await CardIDB.deleteDeck(1);
   });
 
-  it('should not add a movie when it has no id', async () => {
+  it('should not add a card when it has no id', async () => {
     await TestFactories.createLikeButtonInitiatorWithCard({});
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));

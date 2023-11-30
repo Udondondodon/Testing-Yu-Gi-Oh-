@@ -30,6 +30,24 @@ body {
 h2 {
   color: $text-color;
 }
+.dashboard {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+  button {
+    color: white;
+    background-color: #072e52;
+    border-radius: 1rem;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  button:hover {
+    color: #022e57;
+    background-color: white;
+  }
+}
 header {
   display: flex;
   align-items: center;
@@ -133,12 +151,6 @@ main {
   }
 }
 
-.container-detail {
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
 .head {
   display: flex;
   flex-direction: column;
@@ -169,6 +181,52 @@ main {
   }
 }
 
+.card-inv {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-block: 1rem;
+  .container-inv {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    width: 35%;
+    border: 2px solid #1e317c;
+    padding: 1rem;
+  }
+}
+// #detail-card {
+//   display: flex;
+//   flex-direction: column;
+//   color: white;
+//   padding-block: 0.5rem;
+//   .container-detail {
+//     background-color: #001427;
+//     border: 2px solid #1e317c;
+//     display: flex;
+//     align-self: center;
+//     width: 50%;
+//     .content {
+//       display: flex;
+//       flex-direction: column;
+//       .description {
+//         width: 25%;
+//       }
+//     }
+//   }
+// }
+
+#detail-card {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.content {
+  .img {
+    display: flex;
+    justify-content: center;
+  }
+}
 .menu {
   margin-bottom: 20px;
 

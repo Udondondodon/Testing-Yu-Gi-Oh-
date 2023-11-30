@@ -1,11 +1,12 @@
 import CardIDB from '../../data/card-database';
-import { createCardList } from '../templates/template-creator';
+import { createCardInventory } from '../templates/template-creator';
 
 const Inventory = {
   async render() {
     return `
         <h2>Ini adalah list kartu yang anda miliki</h2>
-        <div class="card-list" id="card-list"></div>
+        <div class="card-inv" id="card-inv">
+        </div>
     `;
   },
 
@@ -15,9 +16,9 @@ const Inventory = {
     };
     try {
       const cards = await CardIDB.getAllCards();
-      const cardContainer = document.querySelector('#card-list');
+      const cardContainer = document.querySelector('#card-inv');
       cards.forEach((card) => {
-        cardContainer.innerHTML += createCardList(card);
+        cardContainer.innerHTML += createCardInventory(card);
       });
     } catch (error) {
       showResponseMessage(error);

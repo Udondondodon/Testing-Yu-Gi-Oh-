@@ -6,13 +6,30 @@ const createCardList = (card) => `
   </div>
 `;
 
+const createCardInventory = (card) => `
+  <div class="container-inv" id "container-inv">
+    <div id="card-name">
+      <td >${card.name}</td>
+    </div>
+    <div id="card-opsi">
+      <td><a href="#/detail/${card.id}"><button>Detail Kartu</button></a></td>
+    </div>
+  </div>
+`;
+
 const createCardDetail = (card) => `
   <div class="container-detail">
     <div class="head">
       <h2>${card.name}</h2>
-      <img class="lazyload" src="${card.card_images[0].image_url}" alt="Foto Restoran ${card.name}">
-      <p>${card.desc}</p>
     </div>
+    <div class="content">
+      <div class"img">
+        <img src="${card.card_images[0].image_url}" alt="Foto Kartu ${card.name}">
+      </div>
+      <div class ="description">
+        <p class="desc">${card.desc}</p>
+      </div>
+    <div>
   </div>
   `;
 
@@ -30,6 +47,7 @@ const createLikedButtonTemplate = () => `
 
 export {
   createCardList,
+  createCardInventory,
   createCardDetail,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
